@@ -1,7 +1,29 @@
 # How_to_build_RT58x_Matter
-###### Guide Document 2023.04.27 
+###### Guide Document 2024.02.22 
 
-#### 1. How to build edge Applcation
+#### 0. Using Docker on Linux System 
+```bash
+#Prepare Docker 
+$ sudo apt-get update
+$ sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+$ sudo apt-get update
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+```bash
+#Just run ./join.sh ./buil.sh
+$ ./build.sh
+...
+...
+$ ./join.sh
+...
+...
+# Fianllly sdk folder can find $/home/$(username)/shared/
+```
+
+#### 1. Do not use Docker 
 ```bash
 EC2 AWS Free t2.micro 30GB (Free Tier) 
 OS : Ubuntu 20.04 LTS 
